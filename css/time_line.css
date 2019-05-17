@@ -1,0 +1,216 @@
+/*默认样式设置*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, textarea, form, input, select{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    color: white;
+    background: #d7fdff;
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/*header*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+.header-box{
+    width: 1200px;
+    height: 60px;
+    margin: auto;
+}
+.header-box .logo{
+    line-height: 60px;
+    font-size: 25px;
+    font-family: "Adobe Arabic";
+    margin-right: 100px;
+    float: left;
+}
+.header-box .list{
+    line-height: 60px;
+    font-size: 16px;
+    font-family: "Adobe 宋体 Std L";
+    float: left;
+}
+.header-box .list li{
+    margin-right: 25px;
+    color: white;
+    float: left;
+}
+.header-box .list a{
+    color: white;
+}
+.header-box .list a:hover{
+    color: #4a9eff;
+}
+.header-box img{
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-top: 15px;
+}
+
+/*content*/
+.content{
+    width: 1200px;
+    height: 1000px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+}
+.content > img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content .title:hover::before{
+    width: 100px;
+    transition:all .5s;
+}
+.content .title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 auto;
+    position: relative;
+    font-size: 18px;
+}
+.content .title::before{
+    display: block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #1C2327;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: all .5s linear;
+}
+.content .list{
+    width: 100%;
+    height: 90%;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.content .list li{
+    width: 100%;
+    height: 32px;
+}
+.content .list span{
+    color: #999999;
+    margin-right: 40px;
+    height: 20px;
+    position: relative;
+}
+.content .list span::after{
+    content: ' ';
+    width: 2px;
+    height: 35px;
+    background: #e0dfdf;
+    position: absolute;
+    left: 105px;
+    top: -4px;
+}
+.content .list a{
+    position: relative;
+}
+.content .list a:hover::before{
+    background: black;
+}
+.content .list a::before{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #cccaca;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: -28px;
+    top: 4px;
+}
+.content .page-list{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+.content .page-list a{
+    padding: 5px;
+    box-sizing: border-box;
+    height: 30px;
+    background: #F7F7F7;
+    margin: 10px 20px;
+}
+.content .page-list > p{
+    padding: 5px;
+    box-sizing: border-box;
+    height: 30px;
+    background: #F7F7F7;
+    margin: 10px 20px;
+    color: black;
+}
+
+    /*footer*/
+.footer{
+    width: 100%;
+    height: 190px;
+    border-top: 10px solid #5db2ff;
+    background: #1C2327;
+}
+.footer .text{
+    width: 100%;
+    height: 120px;
+    margin: 30px auto;
+}
+.footer .text .wx-img{
+    width: 250px;
+    height: 120px;
+    margin: 0 100px;
+    float: left;
+}
+.footer .text .wx-img li{
+    float: left;
+    margin-right: 20px;
+}
+.footer .text .wx-img img{
+    width: 100px;
+    height: 100px;
+}
+.footer .text .wx-img span{
+    display: block;
+    margin-left: 10px;
+}
+.footer .text p:nth-child(2){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: #7f91ff;
+    margin-top: 10px;
+    text-align: left;
+}
+.footer .text p:nth-child(3){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .text p:nth-child(4){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}

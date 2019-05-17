@@ -1,0 +1,165 @@
+/*默认样式设置*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, textarea, form, input, select{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    color: white;
+    background: #d7fdff;
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/*header*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+.header-box{
+    width: 1200px;
+    height: 60px;
+    margin: auto;
+}
+.header-box .logo{
+    line-height: 60px;
+    font-size: 25px;
+    font-family: "Adobe Arabic";
+    margin-right: 100px;
+    float: left;
+}
+.header-box .list{
+    line-height: 60px;
+    font-size: 16px;
+    font-family: "Adobe 宋体 Std L";
+    float: left;
+}
+.header-box .list li{
+    margin-right: 25px;
+    color: white;
+    float: left;
+}
+.header-box .list a{
+    color: white;
+}
+.header-box .list a:hover{
+    color: #4a9eff;
+}
+.header-box img{
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-top: 15px;
+}
+
+
+
+/*about*/
+.about{
+    width: 1160px;
+    height: 320px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.about .top{
+    width: 1120px;
+    height: 100px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+.about .top img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+}
+.about .top h3{
+    margin-bottom: 20px;
+    margin-left: 120px;
+    color: #1C2327;
+}
+.about .top p{
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    color: #1C2327;
+}
+.about h2{
+    width: 150px;
+    margin: 30px;
+    padding: 5px;
+    border-bottom: 1px dashed black;
+    color: #1C2327;
+}
+.about p{
+    margin-left: 30px;
+    color: #1C2327;
+}
+.about > img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 190px;
+    border-top: 10px solid #5db2ff;
+    background: #1C2327;
+}
+.footer .text{
+    width: 100%;
+    height: 120px;
+    margin: 30px auto;
+}
+.footer .text .wx-img{
+    width: 250px;
+    height: 120px;
+    margin: 0 100px;
+    float: left;
+}
+.footer .text .wx-img li{
+    float: left;
+    margin-right: 20px;
+}
+.footer .text .wx-img img{
+    width: 100px;
+    height: 100px;
+}
+.footer .text .wx-img span{
+    display: block;
+    margin-left: 10px;
+}
+.footer .text p:nth-child(2){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: #7f91ff;
+    margin-top: 10px;
+    text-align: left;
+}
+.footer .text p:nth-child(3){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .text p:nth-child(4){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
