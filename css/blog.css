@@ -39,10 +39,29 @@ a{
     font-family: "Adobe 宋体 Std L";
     float: left;
 }
-.header-box .list li{
+.header-box .list > li{
     margin-right: 25px;
     color: white;
     float: left;
+}
+.header-box .list > li:nth-child(3){
+    position: relative;
+}
+.header-box .list > li:nth-child(3):hover .sub{
+    display: block;
+}
+.header-box .list > li:nth-child(3) > .sub{
+    background: black;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 999;
+    display: none;
+    line-height: 45px;
+}
+.header-box .list > li:nth-child(3) > .sub > li{
+    height: 30px;
 }
 .header-box .list a{
     color: white;
@@ -54,8 +73,32 @@ a{
     width: 30px;
     height: 30px;
     float: right;
+}
+.header-box .search{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 200px;
     margin-top: 15px;
 }
+.search-box{
+    width: 1200px;
+    height: 50px;
+    background: white;
+    margin: 10px auto;
+    display: none;
+}
+.search-box input:nth-child(1){
+    width: 60%;
+    height: 30px;
+    margin: 10px 0px 0px 160px;
+}
+.search-box input:nth-child(2){
+    width: 10%;
+    height: 30px;
+    line-height: 50px;
+}
+
 
 /*message*/
 .message{
@@ -542,9 +585,10 @@ a{
     border-radius: 5px;
 }
 .main .left .bottom li{
-    width: 100%;
+    width: 855px;
     height: 180px;
-    border-bottom: 1px solid gray;
+    margin-left: 22px;
+    border-bottom: 1px dashed #eeeeee;
 }
 .main .left .bottom .blog-title{
     width: 855px;
@@ -560,19 +604,28 @@ a{
     float: left;
     line-height: 30px;
 }
+.main .left .bottom .blog-title a:hover{
+    color: #4a9eff;
+}
 .main .left .bottom .left{
     width: 200px;
     height: 125px;
-    margin: 0 20px;
+    margin: 0 0px;
+    overflow: hidden;
 }
 .main .left .bottom .left img{
     width: 200px;
     height: 125px;
     border-radius: 5px;
+    transition: all 1s linear;
+}
+.main .left .bottom .left img:hover{
+    transform: scale(1.1,1.1);
 }
 .main .left .bottom .right{
     width: 640px;
     height: 140px;
+    margin-left: 15px;
     position: relative;
 }
 .main .left .bottom .right p{
@@ -623,12 +676,27 @@ a{
     border-radius: 5px;
     margin-bottom: 20px;
 }
-.main .right .rank img{
+.main .right  .img-border{
     width: 238px;
     height: 140px;
     margin: 20px;
-    margin-left: 21px;
+    overflow: hidden;
+    position: relative;
+}
+.main .right .rank img{
+    width: 238px;
+    height: 140px;
     border-radius: 5px;
+    transition: all 1s linear;
+}
+.main .right .rank img:hover{
+    transform: scale(1.1,1.1);
+}
+.main .right .rank span{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    line-height: 140px;
 }
 .main .right .rank .content{
     width: 238px;
@@ -698,12 +766,15 @@ a{
     border-radius: 5px;
     padding-bottom: 20px;
 }
+
 .main .right .recommend .title-img{
     width: 238px;
     height: 140px;
-    margin: 20px;
-    margin-left: 21px;
     border-radius: 5px;
+    transition: all 1s linear;
+}
+.main .right .recommend .title-img:hover{
+    transform: scale(1.1,1.1);
 }
 .main .right .recommend .content li{
     width: 238px;
@@ -726,19 +797,35 @@ a{
     margin: 8px;
     font-size: 16px;
 }
+
+
 .main .right .img{
     width: 100%;
     height: 200px;
     background: white;
     margin-top: 20px;
     border-radius: 5px;
+    position: relative;
 }
-.main .right .img img{
+.main .right .img > .border{
     width: 238px;
     height: 172px;
-    margin: 14px 21px;
-    border-radius: 5px;
+    margin: 15px 21px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
 }
+.main .right .img .border img{
+    width: 238px;
+    height: 172px;
+    border-radius: 5px;
+    transition: all 1s linear;
+}
+.main .right .img .border img:hover{
+    transform: scale(1.1,1.1);
+}
+
 .main .right .like{
     width: 100%;
     min-height: 100px;
@@ -776,12 +863,31 @@ a{
     text-overflow: ellipsis;
 }
 
+.main .right .info{
+    width: 280px;
+    background: white;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin: 20px 0;
+}
+.main .right .info ul li{
+    width: 238px;
+    height: 20px;
+    margin: 10px 21px;
+    color: #1C2327;
+}
+.main .right .info > img{
+    width: 200px;
+    height: 200px;
+    margin: 20px 40px;
+}
 /*footer*/
 .footer{
     width: 100%;
     height: 190px;
     border-top: 10px solid #5db2ff;
     background: #1C2327;
+    position: relative;
 }
 .footer .text{
     width: 100%;
@@ -827,4 +933,13 @@ a{
     height: 25px;
     color: white;
     margin-top: 5px;
+}
+.footer .top{
+    width: 34px;
+    height: 34px;
+    background: url("../image/top.png") black center ;
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20%;
 }

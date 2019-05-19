@@ -39,10 +39,29 @@ a{
     font-family: "Adobe 宋体 Std L";
     float: left;
 }
-.header-box .list li{
+.header-box .list > li{
     margin-right: 25px;
     color: white;
     float: left;
+}
+.header-box .list > li:nth-child(3){
+    position: relative;
+}
+.header-box .list > li:nth-child(3):hover .sub{
+    display: block;
+}
+.header-box .list > li:nth-child(3) > .sub{
+    background: black;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 999;
+    display: none;
+    line-height: 45px;
+}
+.header-box .list > li:nth-child(3) > .sub > li{
+    height: 30px;
 }
 .header-box .list a{
     color: white;
@@ -125,7 +144,7 @@ a{
 .content .left .bottom li{
     width: 860px;
     height: 220px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px dashed #eeeeee;
     margin: 20px auto;
 }
 .bottom li .blog-title{
@@ -594,4 +613,13 @@ a{
     height: 25px;
     color: white;
     margin-top: 5px;
+}
+.footer .top{
+    width: 34px;
+    height: 34px;
+    background: url("../image/top.png") black center ;
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20%;
 }

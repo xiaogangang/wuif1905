@@ -39,10 +39,29 @@ a{
     font-family: "Adobe 宋体 Std L";
     float: left;
 }
-.header-box .list li{
+.header-box .list > li{
     margin-right: 25px;
     color: white;
     float: left;
+}
+.header-box .list > li:nth-child(3){
+    position: relative;
+}
+.header-box .list > li:nth-child(3):hover .sub{
+    display: block;
+}
+.header-box .list > li:nth-child(3) > .sub{
+    background: black;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 999;
+    display: none;
+    line-height: 45px;
+}
+.header-box .list > li:nth-child(3) > .sub > li{
+    height: 30px;
 }
 .header-box .list a{
     color: white;
@@ -60,9 +79,91 @@ a{
 /*content left*/
 .content{
     width: 1200px;
-    height: 1000px;
     margin: 20px auto;
+    height: 2340px;
 }
+.content .left .top{
+    width: 900px;
+    background: white;
+    float: left;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.content .left .top .title:hover::before{
+    width: 100px;
+    transition:all .5s;
+}
+.content .left .top .title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 auto;
+    position: relative;
+    font-size: 18px;
+}
+.content .left .top .title::before{
+    display: block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #1C2327;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: all .5s linear;
+}
+.content .left .top .title span{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.content .left .top h1{
+    font-size: 22px;
+    color: black;
+    margin-top: 20px;
+}
+.content .left .top img{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+.content .left .top span{
+    font-size: 15px;
+    color: #999999;
+}
+.content .left .top .synopsis{
+    width: 860px;
+    height: 68px;
+    color: #888888;
+    background: #f6f6f6;
+    margin-top: 20px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+.content .left .top .synopsis h3{
+    display: inline-block;
+}
+.content .left .top .big-img{
+    width: 100%;
+    height: 400px;
+}
+.content .left .top .big-img img{
+    width: 100%;
+    height: 400px;
+}
+.content .left .top p{
+    height: 50px;
+    width: 160px;
+    background: #E2523A;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
 
 
 /*content right*/
@@ -77,11 +178,11 @@ a{
     border-radius: 5px;
     padding-bottom: 20px;
 }
-.content .title:hover::before{
+.content .right .title:hover::before{
     width: 100px;
     transition:all .5s;
 }
-.content .title{
+.content .right .title{
     width: 85%;
     height: 60px;
     line-height: 60px;
@@ -373,4 +474,68 @@ a{
     width: 200px;
     height: 200px;
     margin: 20px 40px;
+}
+
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 190px;
+    border-top: 10px solid #5db2ff;
+    background: #1C2327;
+}
+
+.footer .text{
+    width: 100%;
+    height: 120px;
+    margin: 30px auto;
+}
+.footer .text .wx-img{
+    width: 250px;
+    height: 120px;
+    margin: 0 100px;
+    float: left;
+}
+.footer .text .wx-img li{
+    float: left;
+    margin-right: 20px;
+}
+.footer .text .wx-img img{
+    width: 100px;
+    height: 100px;
+}
+.footer .text .wx-img span{
+    display: block;
+    margin-left: 10px;
+}
+.footer .text p:nth-child(2){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: #7f91ff;
+    margin-top: 10px;
+    text-align: left;
+}
+.footer .text p:nth-child(3){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .text p:nth-child(4){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .top{
+    width: 34px;
+    height: 34px;
+    background: url("../image/top.png") black center ;
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20%;
 }
