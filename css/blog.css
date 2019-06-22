@@ -88,6 +88,9 @@ a{
     margin: 10px auto;
     display: none;
 }
+.search-box.open{
+    display: block;
+}
 .search-box input:nth-child(1){
     width: 60%;
     height: 30px;

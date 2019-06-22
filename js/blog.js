@@ -2,7 +2,7 @@ window.onload = function () {
     //个人博客日记标题
     let title = document.getElementsByClassName('leftTitle');
     let titles = title[0].getElementsByTagName('li');
-    console.log(titles);
+    // console.log(titles);
     for(let i = 0;i<titles.length;i++){
         titles[i].onclick = function(){
             for(let j = 0;j<titles.length;j++){
@@ -181,5 +181,16 @@ window.onload = function () {
             }
         }
     }
-
+//搜索框
+    let sea = document.querySelector('.search');
+    let search = document.querySelector('.search-box');
+    // sea.onclick = function () {
+    //     search.style.display = 'block';
+    // }
+    sea.addEventListener('click',function () {
+        search.classList.add('open');
+        sea.addEventListener('click',function () {
+            search.classList.remove('open');
+        })
+    })
 }

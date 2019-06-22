@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>留言</title>
     <link rel="stylesheet" href="./css/message.css">
+    <script src="./js/message.js"></script>
 </head>
 <body>
 <div class="header">
@@ -32,41 +33,54 @@
 <div class="content">
     <div class="title">留言</div>
     <p style="font-weight: bold">来说点什么吧</p>
-    <p>您的姓名：<input type="text">&nbsp;*</p>
-    <p>选择头像：*</p>
-    <img src="./image/tx1.jpg" alt="">
-    <img src="./image/tx2.jpg" alt="">
-    <img src="./image/tx3.jpg" alt="">
-    <img src="./image/tx4.jpg" alt="">
-    <img src="./image/tx5.jpg" alt="">
-    <img src="./image/tx6.jpg" alt="">
-    <img src="./image/tx7.jpg" alt="">
-    <img src="./image/tx8.jpg" alt="">
-    <p>留言内容：</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <div class="submit">
-        <input type="submit" value="提交">
-    </div>
-        <div class="message">
-        <img src="./image/tx1.jpg" alt="">
-        <div class="content">
-            <p>ZXCVBNM</p>
-            <p>楼主你好棒！</p>
+    <form action="" name="myForm">
+        <p>您的姓名：<input type="text" name="userName">&nbsp;*</p>
+        <p>选择头像：*</p>
+        <img src="./image/tx1.jpg" alt="" id="01">
+        <img src="./image/tx2.jpg" alt="" id="02">
+        <img src="./image/tx3.jpg" alt="" id="03">
+        <img src="./image/tx4.jpg" alt="" id="04">
+        <img src="./image/tx5.jpg" alt="" id="05">
+        <img src="./image/tx6.jpg" alt="" id="06">
+        <img src="./image/tx7.jpg" alt="" id="07">
+        <img src="./image/tx8.jpg" alt="" id="08">
+        <p>留言内容：</p>
+        <p>字数：已写<span id="count">0</span>字，还可以写 <span id="maxCount">50</span>字</p>
+        <textarea name="" id="" cols="30" rows="10" maxlength="50"></textarea>
+        <div class="submit">
+<!--            <input type="reset" value="重置">-->
+            <input type="submit" value="提交">
         </div>
-    </div>
-    <div class="huifu">
-        <p><span>站长回复：</span>谢谢</p>
-    </div>
-    <div class="message">
-        <img src="./image/tx1.jpg" alt="">
-        <div class="content">
-            <p>ZXCVBNM</p>
-            <p>楼主你好棒！</p>
-        </div>
-    </div>
-    <div class="huifu">
-        <p><span>站长回复：</span>谢谢</p>
-    </div>
+    </form>
+    <ul class="message">
+        <li>
+            <div class="message">
+                <img src="./image/tx1.jpg" alt="">
+                <div class="content">
+                    <p>ZXCVBNM</p>
+                    <p>楼主你好棒！</p>
+                </div>
+            </div>
+            <div class="huifu">
+                <p><span>站长回复：</span>谢谢</p>
+            </div>
+
+        </li>
+        <li>
+            <div class="message">
+                <img src="./image/tx1.jpg" alt="">
+                <div class="content">
+                    <p>ZXCVBNM</p>
+                    <p>楼主你好棒！</p>
+                </div>
+            </div>
+            <div class="huifu">
+                <p><span>站长回复：</span>谢谢</p>
+            </div>
+
+        </li>
+    </ul>
+
 </div>
 <div class="footer">
     <div class="text">
